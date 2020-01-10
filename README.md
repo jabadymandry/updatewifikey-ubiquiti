@@ -1,17 +1,30 @@
-- Requirements:
+# Updatewifikey Ubiquiti AP : Changement automatiquement de la clé wifi des AP.
+
+- **Fonctionnalité:**
+    - Connexion sur Unifi controler (testé sur version 5.x)
+    
+    - Recupère les ssid à modifier le mot de passe
+    
+    - Génère un mot de passe aléatoire
+    
+    - Applique le mot de passe comme clé wifi depuis le controlleur
+    
+    - Met à jour un fichier excel googlesheet partagé avec les utilisateurs ayant accès au fichier.
+    
+- **Requirements:**
     - Python 2.7.x ou supérieur. Testé sur version Python 2.7.13
     - module python : gspread oauth2client
     - Accès en mode ecriture de l'utilisateur utilisé par le script representé dans le fichier json
 
-- Installation:
+- **Installation:**
     - Deploiement les codes sur un serveur
     - Créer un cron pour le déclanchement
 
 
-- Configuration:
+- **Configuration:**
 Le fichier de configuration de l'application se trouve dans /etc/updatewifikey/wifi.conf dont le contenu est le suivant:
 
-# Section Googlesheet
+#### Section Googlesheet [GOOGLE]
 *- Crédentials que j'ai créer pour pouvoir editer le fichier*
 
 **google_credentials = 3531b0eefab4.json**
@@ -29,7 +42,7 @@ Le fichier de configuration de l'application se trouve dans /etc/updatewifikey/w
 **username = username                                                
 password = password**
 
-# Section Wifi
+#### Section Wifi [WIFI]
 *- Liste de wifi à modifier séparé par virgule la clé: exemple: ssid = ETE-CONF,SU-Staff*
 
 **ssid = ETE-CONF**
