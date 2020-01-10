@@ -11,8 +11,7 @@
 - Configuration:
 Le fichier de configuration de l'application se trouve dans /etc/updatewifikey/wifi.conf dont le contenu est le suivant:
 
-# Section Googlesheet & Controller AP
-[GOOGLE]
+# Section Googlesheet
 *- Crédentials que j'ai créer pour pouvoir editer le fichier*
 
 **google_credentials = 3531b0eefab4.json**
@@ -31,7 +30,6 @@ Le fichier de configuration de l'application se trouve dans /etc/updatewifikey/w
 password = password**
 
 # Section Wifi
-[WIFI]
 *- Liste de wifi à modifier séparé par virgule la clé: exemple: ssid = ETE-CONF,SU-Staff*
 
 **ssid = ETE-CONF**
