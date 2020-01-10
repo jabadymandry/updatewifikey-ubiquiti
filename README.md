@@ -11,16 +11,35 @@
 - Configuration:
 Le fichier de configuration de l'application se trouve dans /etc/updatewifikey/wifi.conf dont le contenu est le suivant:
 
-# section concernant le googlesheet
+# Section Googlesheet & Controller AP
 [GOOGLE]
-google_credentials = 3531b0eefab4.json                          # Crédentials que j'ai créer pour pouvoir editer le fichier
-google_sheet_id = 0XnZkjvgkq4M9H6Pmwru6JO3i-ULvq1w              # id du fichier sheet recuperer sur l'url du fichier
-controller = 192.168.1.250                                      # Adresse du controlleur Unifi
-username = appli                                                # Utilisateur sur le controlleur avec droit d'edition (admin)
-password = sesfsffds2020                                        # mot de passe
+*- Crédentials que j'ai créer pour pouvoir editer le fichier*
+
+**google_credentials = 3531b0eefab4.json**
+
+*- id du fichier sheet recuperer sur l'url du fichier*
+
+**google_sheet_id = 0XnZkjvgkq4M9H6Pmwru6JO3i-ULvq1w**
+
+*- Adresse du controlleur Unifi*
+
+**controller = 192.168.1.250**
+
+*- Utilisateur sur le controlleur avec permission d'edition*
+
+**username = username                                                
+password = password**
 
 # Section Wifi
 [WIFI]
-ssid = ETE-CONF                                                 # Liste de wifi à modifier la clé: exemple: ssid = ETE-CONF,SU-Staff
-site = default                                                  # Site auxquels sont rattaché les AP, par defaut c'est "default"
-cle_unique = yes                                                # Les même sssid auront -il le même mot de passe ou non?
+*- Liste de wifi à modifier séparé par virgule la clé: exemple: ssid = ETE-CONF,SU-Staff*
+
+**ssid = ETE-CONF**
+
+*- Site auxquels sont rattaché les AP séparé par virgule. Par defaut "default"*
+
+**site = default**
+
+*- Les même sssid auront -il le même mot de passe ou non? Il est possible d'avoir le même ssid sur deux ou plusieurs sites différent auxquels il est possible de mettre le même clé ou clé différent.*
+
+**cle_unique = yes**
